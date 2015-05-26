@@ -163,7 +163,7 @@ public class Dog extends Animal {
 
 <p>Source Code will be posted in a few hours.</p>
 
-<h3>Question 1</h3>
+<h4>Question 1</h4>
 <pre><code>
 int a = 10, b = 0;
 a += 10.9;
@@ -176,11 +176,12 @@ System.out.println("a + 10.9 = " + a);
 //end of question 1
 </code></pre>
 <div><a href="#" class="show_hide">Hint</a>
-    <div class="slidingDiv">Although this is a mixed-type expression, we are moving from a high precision to 
-    a low precision (keyword: truncate).</div></div>
+    <div class="slidingDiv">Dont forget Order of Operations and how it affects String Concatenations!
+    <p>Although this is a mixed-type expression, we are moving from a high precision to a low precision (keyword: truncate).</p>
+    </div></div>
 
 
-<h3>Question 2</h3>
+<h4>Question 2</h4>
 <pre><code>
 /*
  * What will the next 2 statements print to the console?
@@ -191,8 +192,70 @@ System.out.println("++b = " + (++b));
 </code></pre>
 <div><a href="#" class="show_hide">Hint</a>
     <div class="slidingDiv">Remember:
-    <br>pre-incremented statements are evaluated before the statement is finished.
-    <br>post-incremented statements are evaluated after the statement is finished.</div></div>
+    <p>pre-incremented statements are evaluated before the statement is finished.</p>
+    <p>post-incremented statements are evaluated after the statement is finished.</p></div></div>
+
+
+<h4>Question 3</h4>
+<pre><code>
+/*
+ * Question 3:
+ * What will the next 2 statements print to the console?
+ */
+Animal animal1 = new Cat();
+System.out.println("someMemberVariable_ = " + Animal.getMemberVariable());
+//end of question 3
+</code></pre>
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">Don't forget that the constructor of the parent class is always called before the constructor 
+    of the children. Also, note that the variable and function of the abtract class are static. Static variables and 
+    functions are associated with the class, not the instance of the class.</div></div>
+
+
+<h4>Question 4</h4>
+<pre><code>
+/*
+ * Question 4:
+ * What will the next 4 statements print to the console?
+ */
+Animal animal2;
+System.out.println("someMemberVariable_ = " + Animal.getMemberVariable());
+animal2 = new Dog();
+System.out.println("someMemberVariable_ = " + Animal.getMemberVariable());
+//end of question 4
+</code></pre>
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">Continuing from Question 3, static variables and functions are associated with classes, 
+    <strong>not instances</strong>. Pay close attention to when the static variable is incremented.</div></div>
+
+
+<h4>Question 5</h4>
+<pre><code>
+/*
+ * Question 5:
+ * What will the next two statements print to the console?
+ */
+System.out.println(animal1.Speak());
+System.out.println(animal2.Speak());
+//end of question 5
+</code></pre>
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">All methods in Java are potentially polymorphic. Make sure you understand where each 
+    Speak() function is being called from.</div></div>
+
+
+<h4>Question 6</h4>
+<pre><code>
+/*
+ * Question 6:
+ * If the following comment is uncommented by removing the "//" in front 
+ * of the comment, will the code compile? Explain your reasoning.
+ */
+//Animal Godzilla = new Animal();
+</code></pre>
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">Observe what type the variable "Godzilla" is being instantiated as.</div></div>
+
 
       </section>
     </div>
