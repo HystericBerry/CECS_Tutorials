@@ -42,6 +42,125 @@ looking at the solution. Hints will be supplied with every question.</p>
 <p>Use the following .java files to answer the following questions. There are no typos.</p>
 
 <h3>Source Code</h3>
+<p>Quiz1.java
+<pre><code>
+public class Quiz1 {
+
+	public static void main(String[] args) {
+		int a = 10, b = 0;
+		a += 10.9;
+		
+		
+		/*
+		 * Question 1:
+		 * What will the following statement print to the console?
+		 */
+		System.out.println("a + 10.9 = " + a + 10.9);
+		System.out.println("a + 10.9 = " + a);
+		//end of question 1
+		
+		
+		/*
+		 * Question 2:
+		 * What will the next 2 statements print to the console?
+		 */
+		System.out.println("b++ = " + (b++));
+		System.out.println("++b = " + (++b));
+		//end of question 2
+		
+		
+		/*
+		 * Question 3:
+		 * What will the next 2 statements print to the console?
+		 */
+		Animal animal1 = new Cat();
+		System.out.println("someMemberVariable_ = " + Animal.getMemberVariable());
+		//end of question 3
+		
+		
+		/*
+		 * Question 4:
+		 * What will the next 4 statements print to the console?
+		 */
+		Animal animal2;
+		System.out.println("someMemberVariable_ = " + Animal.getMemberVariable());
+		animal2 = new Dog();
+		System.out.println("someMemberVariable_ = " + Animal.getMemberVariable());
+		//end of question 4
+		
+		
+		/*
+		 * Question 5:
+		 * What will the next two statements print to the console?
+		 */
+		System.out.println(animal1.Speak());
+		System.out.println(animal2.Speak());
+		//end of question 5
+		
+		
+		/*
+		 * Question 6:
+		 * If the following comment is uncommented by removing the "//" in front 
+		 * of the comment, will the code compile? Explain your reasoning.
+		 */
+		//Animal Godzilla = new Animal();
+	}
+}
+</code></pre>
+</p>
+
+<p>Animal.java
+<pre><code>
+abstract class Animal {
+	Animal() {
+		System.out.println("I am an Animal!");
+	}
+	
+	abstract String Speak();
+	
+	static int getMemberVariable() {
+		return someMemberVariable_;
+	}
+	
+	static int someMemberVariable_;
+}
+</code></pre>
+</p>
+
+<p>Cat.java
+<pre><code>
+public class Cat extends Animal {
+	Cat() {
+		super();
+		++someMemberVariable_;
+	}
+	
+	@Override
+	String Speak() {
+		// TODO Auto-generated method stub
+		return "Woof!";
+	}
+}
+</code></pre>
+</p>
+
+<p>Dog.java
+<pre><code>
+public class Dog extends Animal {
+	Dog() {
+		super();
+		++someMemberVariable_;
+	}
+	
+	@Override
+	String Speak() {
+		// TODO Auto-generated method stub
+		return "Meow!";
+	}
+}
+</code></pre>
+</p>
+
 <p>Source Code will be posted in a few hours.</p>
 
 <h3>Question 1</h3>
