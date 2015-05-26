@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("#button-1").click(function(){
-          $("#show1").toggle()
-    })
-})
+    $('.show_hide').click(function(){
+        $(this).next('.slidingDiv').slideToggle();
+         return false;
+    });
+});
