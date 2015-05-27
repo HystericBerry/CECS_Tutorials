@@ -126,15 +126,31 @@ implies a dangerous and exciting environment (something that readers may misinte
 <h3>Difference in Compilation Processes</h3>
 <p>As a programmer, it is important to understand the flow of source code for several reasons. First, understanding how code is interpreted by a 
 machine helps users understand the internal differeces between Java and C++. Second, understanding the processing of code also helps programmers 
-optimize processes - Operating System and software refactoring. The following diagrams show the Life Cycle of a source code with respect to its 
-langauge.</p>
+optimize their software - Operating Systems and software refactoring. The following diagrams show the Life Cycle of a source code with respect to 
+its langauge.</p>
 
-<p>*This section of notes is under construction*</p>
-<p><img src="images/JavaLifeCycle.png" alt="Java Life Cycle"></p>
-<p></p>
+<div><p><img src="images/JavaLifeCycle.png" alt="Java Life Cycle"></p>
+<p>Like many other languages, both Java and C++ can be edited using Notepad. However, most programmers use Integrated Development Environments 
+(IDE) in order to edit their code. These IDEs often provide many tools such as syntax correction, libraries, compilers and Debuggers to help 
+programmers develop software with ease. Imagine writing a 200 page essay using Notepad instead of Microsoft Word. The purpose of IDEs is to 
+assist programmers edit text files just as the software they develop should assist consumers/ users.</p>
 
-<p><img src="images/C++CompilationProcess.png" alt="C++ Life Cycle"></p>
-<p></p>
+<p>First, the programmer writes source code - a list of commands in a particular programming language. As stated previously, this source code 
+is often developed in an IDE. When the software is finished, the programmer can directly execute the source code in the IDE. This sends the 
+source code to the java compiler (javac) so that it may be converted into another file with the ".class" extension. Failure to convert from a 
+.java file to a .class file is known as a <strong>compile time error</strong>. Compile time errors consist of used uninitialized objects and 
+variables, syntax errors, improper return statements and etc.</p>
+
+<p>The act of converting a .java file into a .class file is analogous to translating Math statements from a foreign language to English 
+(arguably a universal language), before converting them directly to Math Equations. Unlike C++, Java does not directly convert your source code 
+into assembly language (the universal langauge of all computers and electronics). Instead, Java converts source code (your Pseudo english statements) 
+into a "universal language." As long as the computer architecture has Java installed, the program can be executed.</p>
+
+<p>The real magic of Java occurs in its unique Java Virtual Machine (JVM). The JVM is responsible for converting the "universal" Java ByteCode from 
+the .class file into the final universal language computers understand, Assembly Language.</p></div>
+
+<div><p><img src="images/C++CompilationProcess.png" alt="C++ Life Cycle"></p>
+<p></p></div>
 
 
 <h3>Homework and Quizzes</h3>
