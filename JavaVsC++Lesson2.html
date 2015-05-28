@@ -35,15 +35,43 @@
         <h2>
 <a id="programming-tutorials" class="anchor" href="#programming-tutorials" aria-hidden="true"><span class="octicon octicon-link"></span>
 </a>Lesson 2: Fundamental Data Types in Java and C++</h2>
-<p>*Introduction to Lesson*</p>
+<p>In this lecture, we will learn how Java and C++ handles Fundamental Data Types. It is important to understand how this works for the 
+the following reasons:</p>
 
+<p><pre><code><li>Optimize your program</li>
+<li>Debug your program</li>
+<li>Maintain Data Integrity</li>
+</code></pre></p>
+
+<p>In programming, choosing which data type you use is important to optimizing your code - less cpu and memory intensive. If all shopping 
+carts were 10 feet x 10 feet x 10 feet large, everyone would have a difficult time shopping. Similarly, choosing a data type of size 8 Bytes 
+while only using 1 bit would be unnecessary. This tends to matter especially with mission critical software - software that has a limited 
+amount of hard drive and cpu strength (ex: airplanes). Conversely, choosing a data type that is too small is just as harmful. Imagine shopping 
+for mattresses with a shopping cart a big as a cellphone. By attempting to "shove" large information into a tiny space, we are losing information, 
+this is called truncating.</p>
+
+<p>Knowing how data types work also helps when debugging (fixing) errors. As stated above, attempting to shove large data into a smaller/ confined 
+space results in a loss of data. When you lose data, you are not performing calculations on all the data that was intended. This can result in 
+improper indexing (searching) and inaccurate answers. The idea of maintaining and assuring accuracy of data over time is called <strong>Data 
+Integrity</strong>.</p>
 
 <h3>Comparison of Fundamental Data Types</h3>
 <p>*Insert Table*</p>
 
-<h3>Mathematical Rules in Java and C++</h3>
-<p>Concept: Mixed-Type Expression</p>
-<p>Concept: Truncate</p>
+<h3>Argument Promotion and Implicit Conversions</h3>
+<p>Order of Precedence</p>
+<p>Order of Precedence is equivalent to the Order of Operations in Mathematics, but with additional operators. By following the "Please Excuse 
+My Dear Aunt Sally" rule, it is important to note that exponential notation does not inheritly exist in Java and C++. Hence, users must either 
+import libraries with an exponent function or multiply the number (N) x number of times (N*N*N*...*N). Otherwise, statements in both <a href=
+"https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html">Java</a> and <a href="http://en.cppreference.com/w/cpp/language/
+operator_precedence">C++</a> are executed from left to right. </p>
+
+<p>Let's take a look at some examples:</p>
+<p>*Notes will be updated later*</p>
+
+<p>Concept: Mixed-Type Expression (Promotion Rule)</p>
+<p>Low -> High Precision = data remains intact</p>
+<p>High -> Low Precision = truncate/ lost data</p>
 
 <h3>Order of Operations</h3>
 <p>*List and Explain Order of Operations*</p>
