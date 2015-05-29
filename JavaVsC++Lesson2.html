@@ -69,31 +69,31 @@ operator_precedence">C++</a> are executed from left to right. Click on the links
 <p>Let's take a look at some examples:</p>
 <pre><code>int a = 4, b = 13;
 System.out.println(a + b);
-<div><a href="#" class="show_hide">Hint</a>
-    <div class="slidingDiv">There is only one operator and no left hand expression.</div></div>
-</code></pre>
+<p><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">There is only one operator and no left hand expression.</div></p></code></pre>
 <div><a href="#" class="show_hide">Solution</a>
-    <div class="slidingDiv">17</div></div>
+    <div class="slidingDiv">Answer: 
+<br>17</div></div>
 
 <pre><code>int a = 4, b = 13, c;
 System.out.println(a + b * b);
-<div><a href="#" class="show_hide">Hint</a>
+<p><a href="#" class="show_hide">Hint</a>
     <div class="slidingDiv">There are now two operators: + and *. We know from basic mathematics that the * operator takes 
-precedence over the + operator.</div></div>
-</code></pre>
+precedence over the + operator.</div></p></code></pre>
 <div><a href="#" class="show_hide">Solution</a>
-    <div class="slidingDiv">173</div></div>
+    <div class="slidingDiv">Answer:
+<br>173</div></div>
 
 <p>Strings tend to make operations more confusing:</p>
 <pre><code>int a = 4, b = 13;
 System.out.println("a + b = " + a + b);
-<div><a href="#" class="show_hide">Hint</a>
-    <div class="slidingDiv">There are now two operators of <strong>equivalent</strong> precedence.</div></div>
-</code></pre>
+<p><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">There are now two operators of <strong>equivalent</strong> precedence.</div></p></code></pre>
 <div><a href="#" class="show_hide">Solution</a>
     <div class="slidingDiv">Because there are only two operators with equal precedence, the statement is executed from left to right. 
 This means that "a + b = " + a will be evaluated first, resulting in the String concatenation: "a + b = 4". Then, the resulting String 
-will be concatenated again in the statement "a + b = 4" + b. Answer:
+will be concatenated again in the statement "a + b = 4" + b. 
+<br>Answer:
 <br>a + b =413</div></div>
 
 <p>Important concepts when writing mathematical statements in programming are the <strong>Mixed-Type Expression</strong> and <strong>
