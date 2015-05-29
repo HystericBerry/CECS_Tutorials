@@ -43,9 +43,9 @@ the following reasons:</p>
 <li>Maintain Data Integrity</li>
 </code></pre></p>
 
-<p>In programming, choosing which data type you use is important to optimizing your code - less cpu and memory intensive. If all shopping 
-carts were 10 feet x 10 feet x 10 feet large, everyone would have a difficult time shopping. Similarly, choosing a data type of size 8 Bytes 
-while only using 1 bit would be unnecessary. This tends to matter especially with mission critical software - software that has a limited 
+<p>In programming, choosing which data type you use is important to optimizing your code because it is less cpu and memory intensive. If all 
+shopping carts were 10 feet x 10 feet x 10 feet large, everyone would have a difficult time shopping. Similarly, choosing a data type of size 8 
+Bytes while only using 1 bit would be unnecessary. This tends to matter especially with mission critical software - software that has a limited 
 amount of hard drive and cpu strength (ex: airplanes). Conversely, choosing a data type that is too small is just as harmful. Imagine shopping 
 for mattresses with a shopping cart a big as a cellphone. By attempting to "shove" large information into a tiny space, we are losing information, 
 this is called truncating.</p>
@@ -64,19 +64,66 @@ Integrity</strong>.</p>
 My Dear Aunt Sally" rule, it is important to note that exponential notation does not inheritly exist in Java and C++. Hence, users must either 
 import libraries with an exponent function or multiply the number (N) x number of times (N*N*N*...*N). Otherwise, statements in both <a href=
 "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html">Java</a> and <a href="http://en.cppreference.com/w/cpp/language/
-operator_precedence">C++</a> are executed from left to right. </p>
+operator_precedence">C++</a> are executed from left to right. Click on the links to view order of precedence before moving on.</p>
 
 <p>Let's take a look at some examples:</p>
-<p>*Notes will be updated later*</p>
+<pre><code>int a = 4, b = 13;
+System.out.println(a + b);
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">There is only one operator and no left hand expression.</div></div>
+</code></pre>
+<div><a href="#" class="show_hide">Solution</a>
+    <div class="slidingDiv">17</div></div>
 
-<p>Concept: Mixed-Type Expression (Promotion Rule)</p>
-<p>Low -> High Precision = data remains intact</p>
-<p>High -> Low Precision = truncate/ lost data</p>
+<pre><code>int a = 4, b = 13, c;
+System.out.println(a + b * b);
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">There are now two operators: + and *. We know from basic mathematics that the * operator takes 
+precedence over the + operator.</div></div>
+</code></pre>
+<div><a href="#" class="show_hide">Solution</a>
+    <div class="slidingDiv">173</div></div>
 
-<h3>Order of Operations</h3>
-<p>*List and Explain Order of Operations*</p>
+<p>Strings tend to make operations more confusing:</p>
+<pre><code>int a = 4, b = 13;
+System.out.println("a + b = " + a + b);
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">There are now two operators of <strong>equivalent</strong> precedence.</div></div>
+</code></pre>
+<div><a href="#" class="show_hide">Solution</a>
+    <div class="slidingDiv">Because there are only two operators with equal precedence, the statement is executed from left to right. 
+This means that "a + b = " + a will be evaluated first, resulting in the String concatenation: "a + b = 4". Then, the resulting String 
+will be concatenated again in the statement "a + b = 4" + b. Answer:
+<br>a + b =413</div></div>
 
-<p>*Insert Examples*</p>
+<p>Important concepts when writing mathematical statements in programming are the <strong>Mixed-Type Expression</strong> and <strong>
+implicit conversion rule</strong>. Mixed-Type Expression describes the mixing of different data types in one mathematical statement. 
+If we attempt to add an integer to a double, will the result be an integer or a double? Questions like these are answered by the concept 
+of implicit conversion. As programmers, one of the important rules we try to uphold is the Data Integrity rule. If an integer and double 
+resulted in an integer, this would imply we <i>lost</i> data. In order prevent inaccurate data, programming languages should and will always 
+<strong>promote</strong> the resulting expression to the data type of highest precision that was used. Let's take the following generic 
+equation: integer * character + float + double. By Order of Precedence, we have a * that is prioritized over two + operators. An integer * 
+character will result in an integer because an integer is more precise and holds more data than a character data type (remember: all data types 
+are technically stored/ represented as a number in Hexadecimal/binary; therefore, doing math with integers and characters is completely viable). 
+Now, the expression has transformed from integer * character + float + double to integer + float + double. Because a float holds more data and 
+is more precise than an integer, an integer + float results in a float data type. Finally, a double is more precise than a float. The final 
+solution to the generic equation results in a double data type. The general result for any Argument Promotion will always be: </p>
+<pre><code>Promotion Rules:
+Low Precision -> High Precision = data remains intact
+High Precision -> Low Precision = truncate/ lost data</code></pre>
+
+<p>We'll take a look at some examples to clear any confusion:</p>
+<pre><code>int a = 4, b = 13;
+double c = 3.1;
+System.out.println(a + b + c);
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">Equal operators = Equal Precedence. int + int + double</div></div>
+</code></pre>
+<div><a href="#" class="show_hide">Solution</a>
+    <div class="slidingDiv">Because all operators are of equal precedence, we read the statement from left to right. int + int results in an int 
+and the resulting int + double results in a double. 4 + 13 + 3.1 -> 17 + 3.1 -> 20.1 Answer:
+<br>20.1</div></div>
+
 
 <h3>Homework and Quizzes</h3>
 <p>Homework will be posted at a later time.</p>
@@ -94,6 +141,7 @@ operator_precedence">C++</a> are executed from left to right. </p>
       </footer>
     </div>
     
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="javascripts/myResources.js"></script>
   </body>
 </html>
