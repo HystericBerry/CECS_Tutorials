@@ -125,9 +125,24 @@ and the resulting int + double results in a double. 4 + 13 + 3.1 -> 17 + 3.1 -> 
 <br>Answer:
 <br>20.1</div></div>
 
+<pre><code>int a = 10, b = 10, x = 4, y = 13;
+double c = 3.1, z = 1.5;
+System.out.println(a * x - b + c * z * y);
+<div><a href="#" class="show_hide">Hint</a>
+    <div class="slidingDiv">Three * operators have greater precedence than the + and - operators.</div></div>
+</code></pre>
+<div><a href="#" class="show_hide">Solution</a>
+    <div class="slidingDiv">Although the three * operators have greater precedence, keep in mind the * operators are the same and have the same 
+priority as the other. Therefore, the * operators are computed first from left to right, then the rest of the expression is computed from left 
+to right. [10 * 4] - 10 + 3.1 * 1.5 * 13 -> 40 - 10 + [3.1 * 1.5] * 13 -> 40 - 10 + [4.65 * 13] -> [40 - 10] + 60.45 -> [30 + 60.45]
+<br>Answer:
+<br>90.45</div></div>
+
 
 <h3>Homework and Quizzes</h3>
-<p>Homework will be posted at a later time.</p>
+<p>A better way of understanding how computers work is by understanding how calculators work. The early calculators used a mathematical expression 
+known as the Reverse Polish Notation (RPN). This expression was used to calculate a mathematical statement while considering operator precedence. 
+This is done through the use of its postfix notation, where every operator follows its operands.</p>
 <p></p>
 
 
